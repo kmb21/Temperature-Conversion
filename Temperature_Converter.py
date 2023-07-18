@@ -39,14 +39,14 @@ def fahrToCelcius():
     fld2 = tk.Entry(master=masterframe)
     name = tk.Label(master=masterframe, text="Fahrenheit to Celcius", font=("Arial", 16, "bold"))
     tempName = tk.Label(master=masterframe, text="°F")
-    btn = tk.Button(master=masterframe, text="->", command=lambda event: get_Click2(event))
+    btn = tk.Button(master=masterframe, text="->", command=lambda: get_Click2(None))
     fin_val = tk.Label(master=masterframe,text=f"{round(-32*(5/9),2)}°F")
     name.grid(row=1, column=0, sticky="ew")
     fld2.grid(row=1,column=1,sticky="ew")
     tempName.grid(row=1,column=2,stick="w")
     btn.grid(row=1,column=3,padx=2, sticky="nsew")
     fin_val.grid(row=1,column=4,sticky="e")
-    fld2.bind("<Return>",lambda event: get_Click2(event))
+    fld2.bind("<Return>",lambda: get_Click2(None))
     
 def kelvintoCelcius():
     def get_Click(event):
@@ -59,14 +59,14 @@ def kelvintoCelcius():
     fld = tk.Entry(master=masterframe)
     name = tk.Label(master=masterframe, text="Kelvin to Celcius", font=("Arial", 16, "bold"))
     tempName = tk.Label(master=masterframe, text="K")
-    btn = tk.Button(master=masterframe, text="->", command=lambda event: get_Click(event))
+    btn = tk.Button(master=masterframe, text="->", command=lambda: get_Click(None))
     fin_val = tk.Label(master=masterframe,text=f"-273.15°C")
     name.grid(row=2, column=0, sticky="ew")
     fld.grid(row=2,column=1,sticky="ew")
     tempName.grid(row=2,column=2,stick="w")
     btn.grid(row=2,column=3,padx=2, sticky="nsew")
     fin_val.grid(row=2,column=4,sticky="e")
-    fld.bind("<Return>",lambda event: get_Click(event))
+    fld.bind("<Return>",lambda: get_Click(None))
 
 
 celciusToFahr()
