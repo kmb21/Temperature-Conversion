@@ -3,8 +3,9 @@ import tkinter as tk
 window = tk.Tk()
 window.title("Temperature Converter")
 window.minsize(width=200,height=200)
+window.maxsize(700,200)
 
-window.geometry("900x200")
+window.geometry("700x200")
 
 masterframe = tk.Frame(master=window,relief=tk.RAISED)
 masterframe.rowconfigure([0,1,2], weight=1, minsize=50)
